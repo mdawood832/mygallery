@@ -3,7 +3,7 @@ import './Footer.scss';
 import { useAppContext } from '../../context/AppContext';
 import { addZeroesInFront } from '../../utils/functions/functions';
 
-const CATEGORIES = ['Featured', 'iPhone', 'Film', 'Info'];
+const CATEGORIES = ['Pixs'];
 
 const Footer = ({ numImages }) => {
     const {
@@ -40,7 +40,7 @@ const Footer = ({ numImages }) => {
 
     return (
         <div className='Footer_wrapper'>
-            <div className='Footer_name'>Bridget Baker Clone</div>
+            <div className='Footer_name'>mygallery</div>
             <div className='Footer_categoryWrapper'>
                 {CATEGORIES.map((cat, idx) => {
                     let isSelected = cat === category;
@@ -55,7 +55,7 @@ const Footer = ({ numImages }) => {
                             >
                                 {cat}
                             </span>
-                            {idx < 3 && ','}&nbsp;
+                            {idx < 3 && ''}&nbsp;
                         </React.Fragment>
                     );
                 })}
